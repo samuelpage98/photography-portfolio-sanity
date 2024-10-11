@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #3b503e;
+  --foreground: #f7f3ea;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +23,32 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* globals.css or LightboxGallery.module.css */
+
+.masonry-grid {
+  column-count: 1;
+  /* Default column count for mobile */
+  column-gap: 16px;
+  /* Adjust as needed */
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 4;
   }
 }

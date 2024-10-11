@@ -12,8 +12,21 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        caveat: ['var(--font-caveat)', 'cursive'],
+        cinzel: ['var(--font-cinzel)', 'serif'],
+        geistSans: ['var(--font-geist-sans)', 'sans-serif'],
+        geistMono: ['var(--font-geist-mono)', 'monospace'],
+      },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      breakInside: ['responsive']
+    }
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
 export default config;
