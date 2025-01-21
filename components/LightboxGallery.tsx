@@ -39,7 +39,7 @@ const LightboxGallery: React.FC<Props> = ({ photos }) => {
                 width={photo.asset.metadata?.dimensions?.width || 800}
                 height={photo.asset.metadata?.dimensions?.height || 600}
                 className="w-full h-auto transition-transform duration-300 hover:scale-105"
-              // loading="lazy"
+                loading="lazy"
               />
               {photo.title && (
                 <div className="text-center mt-2 text-sm text-gray-700">
